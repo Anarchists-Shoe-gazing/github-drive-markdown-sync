@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GitHub Markdown Sync는 선택한 GitHub 저장소의 Markdown 파일을 소유자의 Google Drive로 복사하는 운영자용 자동화입니다.">
+  <title>GitHub Markdown Sync</title>
+  <style>
+    :root{color-scheme:light;--ink:#182b35;--muted:#536671;--accent:#12695d;--line:#d9e3e4;--paper:#fff;--wash:#f2f7f6}
+    *{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:17px/1.8 system-ui,-apple-system,"Segoe UI",sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+    a{color:var(--accent);text-underline-offset:.2em}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid #a56b12;outline-offset:4px}
+    header,main,footer{max-width:880px;margin:auto;padding:24px}header{display:flex;gap:18px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-weight:750;text-decoration:none}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.94rem}
+    main{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,54px)}h1,h2{line-height:1.35;letter-spacing:-.025em}h1{font-size:clamp(2rem,6vw,3rem);margin:6px 0 22px}h2{font-size:1.3rem;margin-top:36px}.eyebrow{color:var(--accent);font-size:.84rem;font-weight:750;letter-spacing:.06em}.lead{font-size:1.16rem;color:var(--muted)}.notice{background:var(--wash);border-left:4px solid var(--accent);padding:16px 20px;margin:26px 0}.flow{font-weight:650;line-height:2}li+li{margin-top:8px}code{background:#edf2f2;padding:2px 5px;border-radius:4px;font-size:.9em}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.links a{padding:8px 14px;border:1px solid var(--line);border-radius:8px;text-decoration:none}footer{font-size:.85rem;color:var(--muted);padding-bottom:40px}@media(max-width:550px){header{align-items:flex-start}main{border-radius:0}nav{gap:14px}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">GitHub Markdown Sync</a>
+    <nav aria-label="주요 메뉴"><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용 안내</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">ANARCHISTS-SHOE-GAZING · OPERATOR AUTOMATION</p>
+    <h1>GitHub의 Markdown을<br>내 Google Drive로.</h1>
+    <p class="lead">GitHub Markdown Sync는 운영자가 선택한 GitHub 저장소의 <code>.md</code> 파일을 자신의 Google Drive 폴더로 복사하는 자동화입니다.</p>
+    <p>운영 주체는 <a href="https://github.com/Anarchists-Shoe-gazing">Anarchists-Shoe-gazing</a>입니다. 개인·운영자 용도로 사용하며, 공개 회원가입이나 제3자의 계정을 연결해 주는 서비스는 운영하지 않습니다.</p>
+
+    <h2>어떻게 동작하나요?</h2>
+    <p class="flow">선택한 GitHub 저장소 → 로컬 Mac mini 또는 GitHub Actions 실행 환경 → 기존 Google Drive 폴더</p>
+    <ul>
+      <li>저장소마다 지정된 Drive 폴더를 사용하고 원본의 하위 폴더 구조를 유지합니다.</li>
+      <li>같은 경로의 파일은 업데이트할 수 있습니다. 원본에서 삭제된 파일을 Drive에서 자동으로 삭제하지 않습니다.</li>
+      <li>자동 실행은 기본적으로 꺼져 있습니다. GitHub Actions 업로드는 <code>GDRIVE_SYNC_ENABLED</code>가 <code>true</code>인 저장소에서만 시작합니다.</li>
+    </ul>
+
+    <aside class="notice" aria-label="Google Drive 권한 안내">
+      <strong>Google 연결 전에 권한 범위를 확인하세요.</strong>
+      <p>이 앱은 <code>https://www.googleapis.com/auth/drive</code> 권한을 사용합니다. 이 권한은 Google Drive 전체의 파일을 조회·생성·수정·삭제할 수 있는 범위입니다. 설정된 루트 폴더는 앱의 실제 작업 위치를 제한하지만, OAuth 권한 자체를 해당 폴더로 좁히지는 않습니다.</p>
+    </aside>
+
+    <h2>데이터와 연결은 소유자가 관리합니다</h2>
+    <p>파일은 선택한 Drive 폴더에 남습니다. 자동화를 중단하거나 Google 연결을 해제해도 이미 복사한 파일은 자동으로 지워지지 않습니다. 데이터 처리, 보관 및 연결 해제 방법은 개인정보처리방침에 설명되어 있습니다.</p>
+    <div class="links"><a href="privacy.html">개인정보처리방침 읽기</a><a href="terms.html">이용 안내 읽기</a><a href="https://github.com/Anarchists-Shoe-gazing/github-drive-markdown-sync/issues">지원 문의</a></div>
+  </main>
+  <footer>GitHub Markdown Sync · Anarchists-Shoe-gazing<br>문서 버전: <time datetime="2026-11-03">2026-11-03</time></footer>
+</body>
+</html>
